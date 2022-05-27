@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Greenhouse.SLDASM">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="5.339 -9.7648 -0.70978"
+        rpy="0 0 0" />
+      <mass
+        value="159760" />
+      <inertia
+        ixx="408190"
+        ixy="1.3448E-10"
+        ixz="-6.9065E-12"
+        iyy="680790"
+        iyz="-4.6466E-12"
+        izz="464150" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Greenhouse.SLDASM/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="1">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Greenhouse.SLDASM/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+</robot>

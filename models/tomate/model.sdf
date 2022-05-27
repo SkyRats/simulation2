@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="tomate">
+    <static>true</static>
+    <link name="tomate_link">
+      <visual name="visual_tomate">
+        <cast_shadows>true</cast_shadows>
+        <geometry>
+          <mesh>
+            <uri>model://tomate/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="collision_tomate">
+        <geometry>
+          <mesh>
+            <uri>model://tomate/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>
