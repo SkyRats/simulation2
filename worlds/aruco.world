@@ -1,17 +1,41 @@
 <?xml version="1.0"?>
 <sdf version="1.5">
-  <world name="aruco_world">
+  <world name="aruco">
     <include>
       <uri>model://ground_plane</uri>
     </include>
     <include>
       <uri>model://sun</uri>
     </include>
-    <include><!-- ArUcos -->
+    <include><!-- ArUco ID=3 -->
       <static>true</static>
       <uri>model://ArUco3</uri>
-      <name>aruco</name>
+      <name>aruco3</name>
       <pose>0 0 0 0 0 0</pose>
+    </include>
+    <include><!-- ArUco ID=5 -->
+      <static>true</static>
+      <uri>model://ArUco5</uri>
+      <name>aruco5</name>
+      <pose>5 5 0 0 0 0</pose>
+    </include>
+    <include><!-- ArUco ID=9 -->
+      <static>true</static>
+      <uri>model://ArUco9</uri>
+      <name>aruco9</name>
+      <pose>7 0 0 0 0 0</pose>
+    </include>
+    <include><!-- ArUco ID=10 -->
+      <static>true</static>
+      <uri>model://ArUco10</uri>
+      <name>aruco10</name>
+      <pose>0 7 0 0 0 0</pose>
+    </include>
+    <include><!-- ArUco ID=11 -->
+      <static>true</static>
+      <uri>model://ArUco11</uri>
+      <name>aruco11</name>
+      <pose>-3 7 0 0 0 0</pose>
     </include>
   </world>
 </sdf>
