@@ -7,13 +7,13 @@
         <cast_shadows>true</cast_shadows>
         <geometry>
           <mesh>
-            <uri>model://ArUco/meshes/Plane.dae</uri>
+            <uri>model://ArUco3/meshes/Plane.dae</uri>
           </mesh>
         </geometry>
         <material>
           <script>
-            <uri>model://ArUco/materials/scripts</uri>
-            <uri>model://ArUco/materials/textures</uri>
+            <uri>model://ArUco3/materials/scripts</uri>
+            <uri>model://ArUco3/materials/textures</uri>
             <name>marker/aruco3</name>
           </script>
         </material>
