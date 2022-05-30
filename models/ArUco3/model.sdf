@@ -21,7 +21,7 @@
       <collision name="collision_aruco">
         <geometry>
           <mesh>
-            <uri>model://ArUco/meshes/Plane.dae</uri>
+            <uri>model://ArUco3/meshes/Plane.dae</uri>
           </mesh>
         </geometry>
       </collision>
