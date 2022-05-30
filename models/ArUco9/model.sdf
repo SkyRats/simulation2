@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="new_aruco">
+    <static>true</static>
+    <link name="aruco_link">
+      <visual name="visual_aruco">
+        <cast_shadows>true</cast_shadows>
+        <geometry>
+          <mesh>
+            <uri>model://ArUco9/meshes/Plane.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://ArUco9/materials/scripts</uri>
+            <uri>model://ArUco9/materials/textures</uri>
+            <name>marker/aruco9</name>
+          </script>
+        </material>
+      </visual>
+      <collision name="collision_aruco">
+        <geometry>
+          <mesh>
+            <uri>model://ArUco9/meshes/Plane.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>

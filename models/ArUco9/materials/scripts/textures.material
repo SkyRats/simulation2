@@ -1,0 +1,18 @@
+material marker/aruco9
+{
+  receive_shadows off
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture markerID=9.png
+      }
+    }
+  }
+}
+
+  
+
+
