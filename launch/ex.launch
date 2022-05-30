@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Launch file ROS2 -->
 <launch>
-    <include file="$(find px4)/launch/mavros_posix_sitl.launch"/>
-</launch>   
+    <include file="$(find px4)/launch/mavros_posix_sitl.launch">
+        <let name="vehicle" value="iris"/>
+	<arg name="sdf" value="$(find simulation)/models/iris_fpv_cam/model.sdf"/>
+        <arg name="world" value="$(find simulation)/worlds/H.world" />
+        <arg name="z" value="0.5"/>
+    </include>
+</launch>
