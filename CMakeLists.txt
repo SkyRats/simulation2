@@ -8,6 +8,11 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   DESTINATION share/${PROJECT_NAME})
 endif()
 
+install(DIRECTORY worlds
+DESTINATION share/${PROJECT_NAME})
+
+install(DIRECTORY models
+DESTINATION share/${PROJECT_NAME})
 
 # find dependencies
 find_package(ament_cmake REQUIRED)

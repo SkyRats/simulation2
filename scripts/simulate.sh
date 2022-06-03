@@ -27,7 +27,7 @@ export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:${SIMULATION_DIR}/build/px4_sitl
 #cd $HOME/skyrats-workplace/src/PX4-Autopilot
 #make px4_sitl gazebo
 
-ros2 launch simulation2 gazebo.launch.py
+ros2 launch simulation2 simulate.launch.py
 
 ##future ideas##
 
