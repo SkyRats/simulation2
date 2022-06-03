@@ -17,20 +17,17 @@ export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$FIRMWARE_DIR/Tools/sitl_gazebo
 
 # Setup Gazebo to find this package's models and plugins
 export GAZEBO_MODEL_PATH=${GAZEBO_MODEL_PATH}:${SIMULATION_DIR}/models
+export GAZEBO_MODEL_PATH=${GAZEBO_MODEL_PATH}:${HOME}/skyrats_ws2/src/simulation2/models
 export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:${SIMULATION_DIR}/build/px4_sitl_default/build_gazebo
 
-# Setup skyrats interface for gazebo
- > ~/.gazebo/gui.ini
-echo -e "[geometry]\nx=0\ny=0\n[overlay_plugins]\nfilenames=libskyrats_interface.so" >> ~/.gazebo/gui.ini
-
-
-#cd $HOME/skyrats-workplace/src/PX4-Autopilot/Tools/sitl_gazebo/worlds
+#cd $HOME/skyrats_ws2/install/simulation2/share/simulation2/worlds
 #gazebo aruco.world --verbose
 
 
-cd $HOME/skyrats-workplace/src/PX4-Autopilot
-make px4_sitl gazebo_iris_fpv_cam
+#cd $HOME/skyrats-workplace/src/PX4-Autopilot
+#make px4_sitl gazebo
 
+ros2 launch simulation2 gazebo.launch.py
 
 ##future ideas##
 
