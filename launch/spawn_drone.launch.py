@@ -4,16 +4,16 @@ from launch.actions import IncludeLaunchDescription, DeclareLaunchArgument, Exec
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import ThisLaunchFileDir, LaunchConfiguration
 from launch_ros.actions import Node
+from ament_index_python.packages import get_package_share_directory
 
 
 def generate_launch_description():
 
     HOME = os.environ.get('HOME')
     PX4_RUN_DIR = HOME + '/tmp/px4_run_dir'
-
     spawn_entity = Node(package='gazebo_ros', executable='spawn_entity.py',
                         arguments=[
-                                    '-database', LaunchConfiguration('sdf'), 
+                                    '-file', LaunchConfiguration('sdf'),
                                     '-entity', LaunchConfiguration('model'), 
                                     '-x', LaunchConfiguration('x'),
                                     '-y', LaunchConfiguration('y'),
@@ -34,7 +34,6 @@ def generate_launch_description():
     DeclareLaunchArgument('P', default_value='0.0'),
     DeclareLaunchArgument('Y', default_value='0.0'),
     spawn_entity,
-
     ExecuteProcess(
         cmd=[
             HOME + '/skyrats-workplace/src/PX4-Autopilot/build/px4_sitl_default/bin/px4',
