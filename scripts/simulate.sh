@@ -30,8 +30,8 @@ export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:${FIRMWARE_DIR}/build/px4_sitl_d
 #cd $HOME/skyrats-workplace/src/PX4-Autopilot
 #make px4_sitl gazebo
 
-ros2 launch simulation2 simulate.launch.py world:='~/skyrats_ws2/src/simulation2/worlds/aruco.world' drone:="$HOME/skyrats_ws2/install/simulation2/share/simulation2/models/iris_fpv_cam_downward/iris_fpv_cam_downward.sdf"
-
+#ros2 launch simulation2 simulate.launch.py world:='~/skyrats_ws2/src/simulation2/worlds/aruco.world' drone:="$HOME/skyrats_ws2/install/simulation2/share/simulation2/models/iris_fpv_cam_downward/iris_fpv_cam_downward.sdf"
+ros2 launch simulation2 simulate.launch.py world:='~/skyrats_ws2/src/simulation2/worlds/aruco.world' drone:="$HOME/skyrats-workplace/src/PX4-Autopilot/Tools/sitl_gazebo/models/iris_green_house/iris_green_house.sdf"
 ##future ideas##
 
 #SIM SPEED CONTROL
