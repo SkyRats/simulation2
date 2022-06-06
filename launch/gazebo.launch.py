@@ -14,9 +14,6 @@ def generate_launch_description():
     HOME = os.environ.get('HOME')
     PX4_RUN_DIR = HOME + '/tmp/px4_run_dir'
     gazebo_launch_dir = os.path.join(get_package_share_directory('gazebo_ros'), 'launch')
-
-    simulation_pkg_dig = get_package_share_directory('simulation2')
-    world = os.path.join(simulation_pkg_dig, 'worlds', 'aruco.world')
     
     os.makedirs(PX4_RUN_DIR, exist_ok=True)
 
@@ -25,7 +22,6 @@ def generate_launch_description():
                                HOME + '/skyrats-workplace/src/PX4-Autopilot/build/px4_sitl_default/build_gazebo'),
         SetEnvironmentVariable('GAZEBO_MODEL_PATH', HOME + '/skyrats-workplace/src/PX4-Autopilot/Tools/sitl_gazebo/models'),
 
-        DeclareLaunchArgument('world', default_value=world),
         DeclareLaunchArgument('world', default_value="$(arg world)"),
 
         IncludeLaunchDescription(

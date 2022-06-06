@@ -17,20 +17,24 @@ def generate_launch_description():
                                     '-entity', LaunchConfiguration('model'), 
                                     '-x', LaunchConfiguration('x'),
                                     '-y', LaunchConfiguration('y'),
-                                    '-z', LaunchConfiguration('z')],
+                                    '-z', LaunchConfiguration('z'),
+                                    '-R', LaunchConfiguration('R'),
+                                    '-P', LaunchConfiguration('P'),
+                                    '-Y', LaunchConfiguration('Y')],
                                     output='screen')
 
     return LaunchDescription([
     SetEnvironmentVariable('PX4_SIM_MODEL', 'iris'),
     DeclareLaunchArgument('model', default_value='iris'),
-    DeclareLaunchArgument('sdf', default_value='iris_fpv_cam'),
+    DeclareLaunchArgument('sdf', default_value='$(arg sdf)'),
     DeclareLaunchArgument('x', default_value='0.0'),
     DeclareLaunchArgument('y', default_value='0.0'),
     DeclareLaunchArgument('z', default_value='1.0'),
-    #DeclareLaunchArgument('R', default_value='0.0'),
-    #DeclareLaunchArgument('P', default_value='0.0'),
-    #DeclareLaunchArgument('Y', default_value='0.0'),
+    DeclareLaunchArgument('R', default_value='0.0'),
+    DeclareLaunchArgument('P', default_value='0.0'),
+    DeclareLaunchArgument('Y', default_value='0.0'),
     spawn_entity,
+
     ExecuteProcess(
         cmd=[
             HOME + '/skyrats-workplace/src/PX4-Autopilot/build/px4_sitl_default/bin/px4',

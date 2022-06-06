@@ -1,4 +1,4 @@
-SIMULATION_DIR="$HOME/skyrats-workplace/src/PX4-Autopilot"
+SIMULATION_DIR="$( cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd )"
 FIRMWARE_DIR="$HOME/skyrats-workplace/src/PX4-Autopilot"
 FIRMWARE_BUILD_DIR="$HOME/skyrats-workplace/src/PX4-Autopilot/build/px4_sitl_default"
 source /usr/share/gazebo/setup.sh
@@ -17,8 +17,10 @@ export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$FIRMWARE_DIR/Tools/sitl_gazebo
 
 # Setup Gazebo to find this package's models and plugins
 export GAZEBO_MODEL_PATH=${GAZEBO_MODEL_PATH}:${SIMULATION_DIR}/models
-export GAZEBO_MODEL_PATH=${GAZEBO_MODEL_PATH}:${HOME}/skyrats_ws2/src/simulation2/models
-export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:${SIMULATION_DIR}/build/px4_sitl_default/build_gazebo
+echo AAAAAAAAAAAAAAAA
+echo $GAZEBO_MODEL_PATH
+echo AAAAAAAAAAAAAAAA
+export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:${FIRMWARE_DIR}/build/px4_sitl_default/build_gazebo
 
 #cd $HOME/skyrats_ws2/install/simulation2/share/simulation2/worlds
 #gazebo aruco.world --verbose
@@ -27,7 +29,7 @@ export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:${SIMULATION_DIR}/build/px4_sitl
 #cd $HOME/skyrats-workplace/src/PX4-Autopilot
 #make px4_sitl gazebo
 
-ros2 launch simulation2 simulate.launch.py
+ros2 launch simulation2 simulate.launch.py world:='~/skyrats_ws2/src/simulation2/worlds/aruco.world' drone:='iris_fpv_cam_downward'
 
 ##future ideas##
 
