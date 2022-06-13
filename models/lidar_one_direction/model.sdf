@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <sdf version="1.4">
-  <model name="lidardownward">
+  <model name="lidar_one_direction">
     <link name="link">
       <pose>0 0 0 0 0 0</pose>
       <inertial>
@@ -48,7 +48,7 @@
           </noise>
         </ray>
         <update_rate>20</update_rate>
-        <plugin name="gazebo_ros_lidardownward_controller" filename="libgazebo_ros_ray_sensor.so">
+        <plugin name="gazebo_ros_lidar_one_direction_controller" filename="libgazebo_ros_ray_sensor.so">
 
           <!-- Change namespace and output topic so published topic is /rrbot/laser/scan -->
         <ros>
