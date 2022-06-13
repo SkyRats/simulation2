@@ -16,9 +16,6 @@ export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$FIRMWARE_DIR/Tools/sitl_gazebo
 # Setup Gazebo to find this package's models and plugins
 export GAZEBO_MODEL_PATH=${GAZEBO_MODEL_PATH}:${SIMULATION_DIR}/models
 export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:${FIRMWARE_DIR}/build/px4_sitl_default/build_gazebo
-echo AAAAAAAAAAAAAAAAAAA
-echo $GAZEBO_PLUGIN_PATH
-echo AAAAAAAAAAAAAAAAAAA
 
 #cd $HOME/skyrats_ws2/install/simulation2/share/simulation2/worlds
 #gazebo aruco.world --verbose
