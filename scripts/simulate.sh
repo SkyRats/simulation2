@@ -17,15 +17,16 @@ export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$FIRMWARE_DIR/Tools/sitl_gazebo
 export GAZEBO_MODEL_PATH=${GAZEBO_MODEL_PATH}:${SIMULATION_DIR}/models
 export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:${FIRMWARE_DIR}/build/px4_sitl_default/build_gazebo
 
-#cd $HOME/skyrats_ws2/install/simulation2/share/simulation2/worlds
-#gazebo aruco.world --verbose
+#####    PARAMETROS CUSTOMIZADOS    #####
+#SIM SPEED CONTROL
+##export PX4_SIM_SPEED_FACTOR=2
 
+#Verbose mode
+##export VERBOSE_SIM=1
 
-#cd $HOME/skyrats-workplace/src/PX4-Autopilot
-#make px4_sitl gazebo
-
+clear
+#####    SELECAO DA SIMULACAO DESEJADA    #####
 echo "Select the world you would like to simulate:"
-#####    ADICIONAR AQUI OS PROXIMOS MUNDOS    ##### 
 echo "(1) IMAV2022 Outdoor" 
 echo "(2) IMAV2022 Indoor"
 read resposta
@@ -36,16 +37,3 @@ elif [ $resposta -eq 2 ]
 then
     ros2 launch simulation2 simulate.launch.py world:="$SIMULATION_DIR/worlds/aruco.world" drone:="$SIMULATION_DIR/models/iris_green_house/iris_green_house.sdf"
 fi    
-#ros2 launch simulation2 simulate.launch.py world:="$SIMULATION_DIR/worlds/aruco.world" drone:="$SIMULATION_DIR/models/iris_fpv_cam_downward/iris_fpv_cam_downward.sdf"
-#ros2 launch simulation2 simulate.launch.py world:="$SIMULATION_DIR/worlds/aruco.world" drone:="$SIMULATION_DIR/models/iris_green_house/iris_green_house.sdf"
-
-##future ideas##
-
-#SIM SPEED CONTROL
-##export PX4_SIM_SPEED_FACTOR=2
-
-#Different models and worlds
-##make px4_sitl gazebo_iris_irlock__sonoma_raceway
-
-#Verbose mode
-##export VERBOSE_SIM=1
