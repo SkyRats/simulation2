@@ -24,8 +24,20 @@ export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:${FIRMWARE_DIR}/build/px4_sitl_d
 #cd $HOME/skyrats-workplace/src/PX4-Autopilot
 #make px4_sitl gazebo
 
+echo "Select the world you would like to simulate:"
+#####    ADICIONAR AQUI OS PROXIMOS MUNDOS    ##### 
+echo "(1) IMAV2022 Outdoor" 
+echo "(2) IMAV2022 Indoor"
+read resposta
+if [ $resposta -eq 1 ]
+then
+    ros2 launch simulation2 simulate.launch.py world:="$SIMULATION_DIR/worlds/aruco.world" drone:="$SIMULATION_DIR/models/iris_fpv_cam_downward/iris_fpv_cam_downward.sdf"
+elif [ $resposta -eq 2 ]
+then
+    ros2 launch simulation2 simulate.launch.py world:="$SIMULATION_DIR/worlds/aruco.world" drone:="$SIMULATION_DIR/models/iris_green_house/iris_green_house.sdf"
+fi    
 #ros2 launch simulation2 simulate.launch.py world:="$SIMULATION_DIR/worlds/aruco.world" drone:="$SIMULATION_DIR/models/iris_fpv_cam_downward/iris_fpv_cam_downward.sdf"
-ros2 launch simulation2 simulate.launch.py world:="$SIMULATION_DIR/worlds/aruco.world" drone:="$SIMULATION_DIR/models/iris_green_house/iris_green_house.sdf"
+#ros2 launch simulation2 simulate.launch.py world:="$SIMULATION_DIR/worlds/aruco.world" drone:="$SIMULATION_DIR/models/iris_green_house/iris_green_house.sdf"
 
 ##future ideas##
 
