@@ -52,7 +52,7 @@
 
           <!-- Change namespace and output topic so published topic is /rrbot/laser/scan -->
         <ros>
-          <namespace>/rrbot/laser</namespace>
+          <namespace>/laser</namespace>
           <argument>~/out:=scan</argument>
         </ros>
         <!-- Set output to sensor_msgs/LaserScan to get same output type as gazebo_ros_laser -->
