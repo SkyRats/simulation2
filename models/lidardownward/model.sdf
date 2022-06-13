@@ -1,0 +1,67 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <model name="lidardownward">
+    <link name="link">
+      <pose>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>0.01</mass>
+        <inertia>
+          <ixx>2.1733e-6</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>2.1733e-6</iyy>
+          <iyz>0</iyz>
+          <izz>1.8e-7</izz>
+        </inertia>
+      </inertial>
+      <visual name="visual">
+        <geometry>
+          <cylinder><radius>0.006</radius><length>0.05</length></cylinder>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Black</name>
+          </script>
+        </material>
+      </visual>
+      <sensor name="laser" type="ray">
+        <pose>0 0 0 0 1.57 0</pose>
+        <ray>
+          <scan>
+            <horizontal>
+              <samples>1</samples>
+              <resolution>1</resolution>
+              <min_angle>-0</min_angle>
+              <max_angle>0</max_angle>
+            </horizontal>
+          </scan>
+          <range>
+            <min>0.06</min> <!-- do not change: use min_distance (below) for realistic behavior (smaller values cause issues) -->
+            <max>35</max>   <!-- do not change: use min_distance (below) for realistic behavior (bigger values cause issues) -->
+            <resolution>0.01</resolution>
+          </range>
+          <noise>
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>0.01</stddev>
+          </noise>
+        </ray>
+        <update_rate>20</update_rate>
+        <plugin name="gazebo_ros_lidardownward_controller" filename="libgazebo_ros_ray_sensor.so">
+
+          <!-- Change namespace and output topic so published topic is /rrbot/laser/scan -->
+        <ros>
+          <namespace>/rrbot/laser</namespace>
+          <argument>~/out:=scan</argument>
+        </ros>
+        <!-- Set output to sensor_msgs/LaserScan to get same output type as gazebo_ros_laser -->
+        <output_type>sensor_msgs/LaserScan</output_type>
+        <!-- <frame_name> ommited, will default to hokuo_link -->
+          <frameName>lidar_link</frameName>
+        </plugin>
+        <visualize>true</visualize>
+      </sensor>
+    </link>
+  </model>
+</sdf>
