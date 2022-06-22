@@ -39,9 +39,9 @@ then
 fi    
 
 
-#####    COPY AND PASTE THE LINE BELOW!    #####
+#####    COPY AND PASTE THE LINES BELOW!    #####
 #elif [ $resposta -eq INSERT_NUMER_HERE ]
 #then
-#    os2 launch simulation2 simulate.launch.py world:="$SIMULATION_DIR/worlds/aruco.world" drone:="$SIMULATION_DIR/models/iris_fpv_cam_downward/iris_fpv_cam_downward.sdf" x:=10 y:=10 z:=10 R:=0 P:=0 Y:=0
+#    ros2 launch simulation2 simulate.launch.py world:="$SIMULATION_DIR/worlds/aruco.world" drone:="$SIMULATION_DIR/models/iris_fpv_cam_downward/iris_fpv_cam_downward.sdf" x:=10 y:=10 z:=10 R:=0 P:=0 Y:=0
 #fi    
-#R, P e Y correspondem a Row, Pitch e Yaw iniciais do drone
+#R, P e Y correspond to Row, Pitch and Yaw
