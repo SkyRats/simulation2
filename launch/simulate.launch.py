@@ -19,12 +19,18 @@ def generate_launch_description():
       PythonLaunchDescriptionSource([os.path.join(
          get_package_share_directory('simulation2'), 'launch'),
          '/spawn_drone.launch.py']),
-      launch_arguments={'sdf': LaunchConfiguration("drone")}.items(),
+      launch_arguments={'sdf': LaunchConfiguration("drone"), 'x': LaunchConfiguration("x"), 'y': LaunchConfiguration("y"), 'z': LaunchConfiguration("z"), 'R': LaunchConfiguration("R"), 'P': LaunchConfiguration("P"), 'Y': LaunchConfiguration("Y")}.items(),
       )
     
     return LaunchDescription([
       DeclareLaunchArgument("world", default_value="empty.world"),
       open_gazebo,
       DeclareLaunchArgument("drone", default_value="iris"),
+      DeclareLaunchArgument('x', default_value='0.0'),
+      DeclareLaunchArgument('y', default_value='0.0'),
+      DeclareLaunchArgument('z', default_value='1.0'),
+      DeclareLaunchArgument('R', default_value='0.0'),
+      DeclareLaunchArgument('P', default_value='0.0'),
+      DeclareLaunchArgument('Y', default_value='0.0'),
       put_drone
     ])

@@ -37,3 +37,8 @@ elif [ $resposta -eq 2 ]
 then
     ros2 launch simulation2 simulate.launch.py world:="$SIMULATION_DIR/worlds/aruco.world" drone:="$SIMULATION_DIR/models/iris_green_house/iris_green_house.sdf"
 fi    
+
+
+#####    EXEMPLO DOS ARGUMENTOS PARA ADICIONAR NOVAS SIMULAÇÕES    #####
+#ros2 launch simulation2 simulate.launch.py world:="$SIMULATION_DIR/worlds/aruco.world" drone:="$SIMULATION_DIR/models/iris_fpv_cam_downward/iris_fpv_cam_downward.sdf" x:=10 y:=10 z:=10 R:=0 P:=0 Y:=0
+#R, P e Y correspondem a Row, Pitch e Yaw iniciais do drone
