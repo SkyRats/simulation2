@@ -25,7 +25,7 @@ export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:${FIRMWARE_DIR}/build/px4_sitl_d
 ##export VERBOSE_SIM=1
 
 clear
-#####    SELECAO DA SIMULACAO DESEJADA    #####
+#####    SELECT THE DESIRED SIMULATION    #####
 echo "Select the world you would like to simulate:"
 echo "(1) IMAV2022 Outdoor" 
 echo "(2) IMAV2022 Indoor"
@@ -39,6 +39,9 @@ then
 fi    
 
 
-#####    EXEMPLO DOS ARGUMENTOS PARA ADICIONAR NOVAS SIMULAÇÕES    #####
-#ros2 launch simulation2 simulate.launch.py world:="$SIMULATION_DIR/worlds/aruco.world" drone:="$SIMULATION_DIR/models/iris_fpv_cam_downward/iris_fpv_cam_downward.sdf" x:=10 y:=10 z:=10 R:=0 P:=0 Y:=0
+#####    COPY AND PASTE THE LINE BELOW!    #####
+#elif [ $resposta -eq INSERT_NUMER_HERE ]
+#then
+#    os2 launch simulation2 simulate.launch.py world:="$SIMULATION_DIR/worlds/aruco.world" drone:="$SIMULATION_DIR/models/iris_fpv_cam_downward/iris_fpv_cam_downward.sdf" x:=10 y:=10 z:=10 R:=0 P:=0 Y:=0
+#fi    
 #R, P e Y correspondem a Row, Pitch e Yaw iniciais do drone
