@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="new_tube">
+    <static>true</static>
+    <link name="tube_link">
+      <visual name="visual_tube">
+        <cast_shadows>true</cast_shadows>
+        <geometry>
+          <mesh>
+            <uri>model://cbrTube/meshes/tube.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://cbrTube/materials/scripts</uri>
+            <uri>model://cbrTube/materials/textures</uri> 
+            <name>tube/color</name>
+          </script>
+        </material>
+      </visual>
+      <collision name="collision_tube">
+        <geometry>
+          <mesh>
+            <uri>model://cbrTube/meshes/tube.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="new_baseAir">
+    <static>true</static>
+    <link name="baseAir_link">
+      <visual name="visual_baseAir">
+        <cast_shadows>true</cast_shadows>
+        <geometry>
+          <mesh>
+            <uri>model://cbrBaseair/meshes/base_air.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://cbrBaseair/materials/scripts</uri>
+            <uri>model://cbrBaseair/materials/textures</uri> 
+            <name>baseAir/color</name>
+          </script>
+        </material>
+      </visual>
+      <collision name="collision_baseAir">
+        <geometry>
+          <mesh>
+            <uri>model://cbrBaseair/meshes/base_air.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>

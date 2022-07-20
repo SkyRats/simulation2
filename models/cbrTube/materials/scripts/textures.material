@@ -1,0 +1,14 @@
+material tube/color
+{
+  receive_shadows off
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture yellowtube.jpg
+      }
+    }
+  }
+}

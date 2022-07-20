@@ -1,4 +1,5 @@
 SIMULATION_DIR="$( cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd )"
+echo SIMULATION_DIR
 FIRMWARE_DIR="$HOME/skyrats-workplace/src/PX4-Autopilot"
 FIRMWARE_BUILD_DIR="$HOME/skyrats-workplace/src/PX4-Autopilot/build/px4_sitl_default"
 
@@ -14,21 +15,23 @@ export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$FIRMWARE_DIR
 export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$FIRMWARE_DIR/Tools/sitl_gazebo
 
 # Setup Gazebo to find this package's models and plugins
-export GAZEBO_MODEL_PATH=${GAZEBO_MODEL_PATH}:${SIMULATION_DIR}/models
-export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:${FIRMWARE_DIR}/build/px4_sitl_default/build_gazebo
+export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:$SIMULATION_DIR/models
+export GAZEBO_PLUGIN_PATH=$GAZEBO_PLUGIN_PATH:$FIRMWARE_DIR/build/px4_sitl_default/build_gazebo
 
 #####    PARAMETROS CUSTOMIZADOS    #####
 #SIM SPEED CONTROL
 ##export PX4_SIM_SPEED_FACTOR=2
 
 #Verbose mode
-##export VERBOSE_SIM=1
+#export VERBOSE_SIM=1
 
 clear
 #####    SELECT THE DESIRED SIMULATION    #####
 echo "Select the world you would like to simulate:"
-echo "(1) IMAV2022 Outdoor" 
+echo "(1) IMAV2022 Outdoor"    
 echo "(2) IMAV2022 Indoor"
+echo "(3) CBR2022"
+
 read resposta
 if [ $resposta -eq 1 ]
 then
@@ -36,6 +39,9 @@ then
 elif [ $resposta -eq 2 ]
 then
     ros2 launch simulation2 simulate.launch.py world:="$SIMULATION_DIR/worlds/aruco.world" drone:="$SIMULATION_DIR/models/iris_green_house/iris_green_house.sdf"
+elif [ $resposta -eq 3 ]
+then
+    ros2 launch simulation2 simulate.launch.py world:="$SIMULATION_DIR/worlds/cbr_2022.world" drone:="$SIMULATION_DIR/models/iris_fpv_cam_downward/iris_fpv_cam_downward.sdf" x:=3.25 y:=-3 z:=1.5 Y:=3.1415
 fi    
 
 

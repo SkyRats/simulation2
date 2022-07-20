@@ -1,0 +1,30 @@
+  <?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="new_airbase">
+    <static>true</static>
+    <link name="airbases_link">
+      <visual name="visual_airbases">
+        <cast_shadows>true</cast_shadows>
+        <geometry>
+          <mesh>
+            <uri>model://cbrAirbases/meshes/airbase.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://cbrAirbases/materials/scripts</uri>
+            <uri>model://cbrAirbases/materials/textures</uri> 
+            <name>airbase/color</name>
+          </script>
+        </material>
+      </visual>
+      <collision name="collision_airbases">
+        <geometry>
+          <mesh>
+            <uri>model://cbrAirbases/meshes/airbase.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>

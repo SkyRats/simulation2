@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="new_mainBase">
+    <static>true</static>
+    <link name="mainBase_link">
+      <visual name="visual_mainBase">
+        <cast_shadows>true</cast_shadows>
+        <geometry>
+          <mesh>
+            <uri>model://cbrMainBase/meshes/baseMain.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://cbrMainBase/materials/scripts</uri>
+            <uri>model://cbrMainBase/materials/textures</uri> 
+            <name>mainBase/color</name>
+          </script>
+        </material>
+      </visual>
+      <collision name="collision_mainBase">
+        <geometry>
+          <mesh>
+            <uri>model://cbrMainBase/meshes/baseMain.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="new_flags">
+    <static>true</static>
+    <link name="flags_link">
+      <visual name="visual_flags">
+        <cast_shadows>true</cast_shadows>
+        <geometry>
+          <mesh>
+            <uri>model://cbrFlag/meshes/flags.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://cbrFlag/materials/scripts</uri>
+            <uri>model://cbrFlag/materials/textures</uri> 
+            <name>flags/color</name>
+          </script>
+        </material>
+      </visual>
+      <collision name="collision_flags">
+        <geometry>
+          <mesh>
+            <uri>model://cbrFlag/meshes/flags.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>

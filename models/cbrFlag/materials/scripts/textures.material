@@ -1,0 +1,14 @@
+material flags/color
+{
+  receive_shadows off
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture tentativa.jpg
+      }
+    }
+  }
+}

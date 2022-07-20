@@ -1,0 +1,14 @@
+material pillar/color
+{
+  receive_shadows off
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture 1K_concrete_basecolor.png
+      }
+    }
+  }
+}

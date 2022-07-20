@@ -1,0 +1,14 @@
+material mainBase/color
+{
+  receive_shadows off
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture base_costeira.png
+      }
+    }
+  }
+}

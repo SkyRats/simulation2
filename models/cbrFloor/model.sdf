@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="new_floor">
+    <static>true</static>
+    <link name="floor_link">
+      <visual name="visual_floor">
+        <cast_shadows>true</cast_shadows>
+        <geometry>
+          <mesh>
+            <uri>model://cbrFloor/meshes/cbr_floor.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://cbrFloor/materials/scripts</uri>
+            <uri>model://cbrFloor/materials/textures</uri> 
+            <name>floor/color</name>
+          </script>
+        </material>
+      </visual>
+      <collision name="collision_floor">
+        <geometry>
+          <mesh>
+            <uri>model://cbrFloor/meshes/cbr_floor.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="new_pillar">
+    <static>true</static>
+    <link name="pillar_link">
+      <visual name="visual_pillar">
+        <cast_shadows>true</cast_shadows>
+        <geometry>
+          <mesh>
+            <uri>model://cbrPillars/meshes/pillars.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://cbrPillars/materials/scripts</uri>
+            <uri>model://cbrPillars/materials/textures</uri> 
+            <name>pillar/color</name>
+          </script>
+        </material>
+      </visual>
+      <collision name="collision_pillar">
+        <geometry>
+          <mesh>
+            <uri>model://cbrPillars/meshes/pillars.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>

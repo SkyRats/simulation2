@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<sdf version="1.5">
+  <world name="cbr_2022_world">
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <include><!-- Pillar -->
+      <static>true</static>
+      <uri>model://cbrPillars</uri>
+      <name>pillarsCbr</name>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+    <include><!-- Airbase -->
+      <static>true</static>
+      <uri>model://cbrAirbases</uri>
+      <name>airbases</name>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+    <include><!-- Floor -->
+      <static>true</static>
+      <uri>model://cbrFloor</uri>
+      <name>floor</name>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+    <include><!-- Grid -->
+      <static>true</static>
+      <uri>model://cbrGrid</uri>
+      <name>grid</name>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+    <include><!-- Tube -->
+      <static>true</static>
+      <uri>model://cbrTube</uri>
+      <name>tube</name>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+    <include><!-- Flags -->
+      <static>true</static>
+      <uri>model://cbrFlag</uri>
+      <name>flags</name>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+    <include><!-- MainBase -->
+      <static>true</static>
+      <uri>model://cbrMainBase</uri>
+      <name>MainBase</name>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+    <include><!-- baseAir -->
+      <static>true</static>
+      <uri>model://cbrBaseair</uri>
+      <name>baseAir</name>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+  </world>
+</sdf>
