@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="new_baseGround2">
+    <static>true</static>
+    <link name="baseGround2_link">
+      <visual name="visual_baseGround2">
+        <cast_shadows>true</cast_shadows>
+        <geometry>
+          <mesh>
+            <uri>model://cbrBaseground2/meshes/generic_base.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://cbrBaseground2/materials/scripts</uri>
+            <uri>model://cbrBaseground2/materials/textures</uri> 
+            <name>baseGround2/color</name>
+          </script>
+        </material>
+      </visual>
+      <collision name="collision_baseGround2">
+        <geometry>
+          <mesh>
+            <uri>model://cbrBaseground2/meshes/generic_base.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>

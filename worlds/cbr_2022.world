@@ -52,5 +52,23 @@
       <name>baseAir</name>
       <pose>0 0 0 0 0 0</pose>
     </include>
+    <include><!-- baseGround1 -->
+      <static>true</static>
+      <uri>model://cbrBaseground1</uri>
+      <name>baseGround1</name>
+      <pose>-3 -3 -0.1 0 0 0</pose>
+    </include>
+    <include> <!-- baseGround2 -->
+      <static>true</static>
+      <uri>model://cbrBaseground2</uri>
+      <name>baseGround2</name>
+      <pose>-1 -1 -0.1 0 0 0</pose>
+    </include>
+    <include> <!-- baseGround3 -->
+      <static>true</static>
+      <uri>model://cbrBaseground3</uri>
+      <name>baseGround3</name>
+      <pose>1 2 -0.1 0 0 0</pose>
+    </include>
   </world>
 </sdf>

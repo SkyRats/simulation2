@@ -1,0 +1,14 @@
+material baseGround2/color
+{
+  receive_shadows off
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture base_generic.png
+      }
+    }
+  }
+}
