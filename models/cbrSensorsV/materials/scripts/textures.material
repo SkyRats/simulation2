@@ -1,0 +1,14 @@
+material sensorsV/color
+{
+  receive_shadows off
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture verde.jpeg
+      }
+    }
+  }
+}

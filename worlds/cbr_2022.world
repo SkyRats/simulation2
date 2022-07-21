@@ -70,5 +70,17 @@
       <name>baseGround3</name>
       <pose>1 2 -0.1 0 0 0</pose>
     </include>
+    <include><!-- Red sensors -->
+      <static>true</static>
+      <uri>model://cbrSensorsR</uri>
+      <name>SensorR</name>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+    <include><!-- Green sensors -->
+      <static>true</static>
+      <uri>model://cbrSensorsV</uri>
+      <name>SensorV</name>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
   </world>
 </sdf>

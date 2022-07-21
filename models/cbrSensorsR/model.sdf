@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="new_sensorsR">
+    <static>true</static>
+    <link name="sensorsR_link">
+      <visual name="visual_sensorsR">
+        <cast_shadows>true</cast_shadows>
+        <geometry>
+          <mesh>
+            <uri>model://cbrSensorsR/meshes/sensorsR.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://cbrSensorsR/materials/scripts</uri>
+            <uri>model://cbrSensorsR/materials/textures</uri> 
+            <name>sensorsR/color</name>
+          </script>
+        </material>
+      </visual>
+      <collision name="collision_sensorsR">
+        <geometry>
+          <mesh>
+            <uri>model://cbrSensorsR/meshes/sensorsR.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>
