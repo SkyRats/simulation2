@@ -1,0 +1,14 @@
+material qrE/color
+{
+  receive_shadows off
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture QrE.png
+      }
+    }
+  }
+}

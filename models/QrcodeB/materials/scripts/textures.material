@@ -1,0 +1,14 @@
+material qrB/color
+{
+  receive_shadows off
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture QrB.png
+      }
+    }
+  }
+}

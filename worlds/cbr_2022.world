@@ -82,5 +82,35 @@
       <name>SensorV</name>
       <pose>0 0 0 0 0 0</pose>
     </include>
+    <include><!-- QR code A -->
+      <static>true</static>
+      <uri>model://QrcodeA</uri>
+      <name>qrA</name>
+      <pose>0.5 -3 1.05 0 0 0</pose>
+    </include>
+    <include><!-- QR code B -->
+      <static>true</static>
+      <uri>model://QrcodeB</uri>
+      <name>qrB</name>
+      <pose>3.31 3.1 1.55 0 0 0</pose>
+    </include>
+    <include><!-- QR code C -->
+      <static>true</static>
+      <uri>model://QrcodeC</uri>
+      <name>qrC</name>
+      <pose>-3 -3 0 0 0 0</pose>
+    </include>
+    <include><!-- QR code D -->
+      <static>true</static>
+      <uri>model://QrcodeD</uri>
+      <name>qrD</name>
+      <pose>-1 -1 0 0 0 0</pose>
+    </include>
+    <include><!-- QR code E -->
+      <static>true</static>
+      <uri>model://QrcodeE</uri>
+      <name>qrE</name>
+      <pose>1 2 0 0 0 0</pose>
+    </include>
   </world>
 </sdf>

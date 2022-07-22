@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="new_qrE">
+    <link name="qrE_link">
+      <visual name="visual_qrE">
+        <cast_shadows>true</cast_shadows>
+        <geometry>
+          <mesh>
+            <uri>model://QrcodeE/meshes/QrE.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://QrcodeE/materials/scripts</uri>
+            <uri>model://QrcodeE/materials/textures</uri> 
+            <name>qrE/color</name>
+          </script>
+        </material>
+      </visual>
+      <collision name="collision_qrE">
+        <geometry>
+          <mesh>
+            <uri>model://QrcodeE/meshes/QrE.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="new_qrC">
+    <link name="qrC_link">
+      <visual name="visual_qrC">
+        <cast_shadows>true</cast_shadows>
+        <geometry>
+          <mesh>
+            <uri>model://QrcodeC/meshes/QrC.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://QrcodeC/materials/scripts</uri>
+            <uri>model://QrcodeC/materials/textures</uri> 
+            <name>qrC/color</name>
+          </script>
+        </material>
+      </visual>
+      <collision name="collision_qrC">
+        <geometry>
+          <mesh>
+            <uri>model://QrcodeC/meshes/QrC.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>

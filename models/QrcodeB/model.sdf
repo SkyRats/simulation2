@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="new_qrB">
+    <link name="qrB_link">
+      <visual name="visual_qrB">
+        <cast_shadows>true</cast_shadows>
+        <geometry>
+          <mesh>
+            <uri>model://QrcodeB/meshes/QrB.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://QrcodeB/materials/scripts</uri>
+            <uri>model://QrcodeB/materials/textures</uri> 
+            <name>qrB/color</name>
+          </script>
+        </material>
+      </visual>
+      <collision name="collision_qrB">
+        <geometry>
+          <mesh>
+            <uri>model://QrcodeB/meshes/QrB.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>
