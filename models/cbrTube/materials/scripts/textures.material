@@ -7,7 +7,7 @@ material tube/color
     {
       texture_unit
       {
-        texture yellowtube.jpg
+        texture laranja.jpg
       }
     }
   }

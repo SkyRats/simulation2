@@ -4,55 +4,55 @@
     <include>
       <uri>model://sun</uri>
     </include>
-    <include><!-- Pillar -->
+    <include> <!-- Pillar -->
       <static>true</static>
       <uri>model://cbrPillars</uri>
       <name>pillarsCbr</name>
       <pose>0 0 0 0 0 0</pose>
     </include>
-    <include><!-- Airbase -->
+    <include> <!-- Airbase -->
       <static>true</static>
       <uri>model://cbrAirbases</uri>
       <name>airbases</name>
       <pose>0 0 0 0 0 0</pose>
     </include>
-    <include><!-- Floor -->
+    <include> <!-- Floor -->
       <static>true</static>
       <uri>model://cbrFloor</uri>
       <name>floor</name>
       <pose>0 0 0 0 0 0</pose>
     </include>
-    <include><!-- Grid -->
+    <include> <!-- Grid -->
       <static>true</static>
       <uri>model://cbrGrid</uri>
       <name>grid</name>
       <pose>0 0 0 0 0 0</pose>
     </include>
-    <include><!-- Tube -->
+    <include> <!-- Tube -->
       <static>true</static>
       <uri>model://cbrTube</uri>
       <name>tube</name>
       <pose>0 0 0 0 0 0</pose>
     </include>
-    <include><!-- Flags -->
+    <include> <!-- Flags -->
       <static>true</static>
       <uri>model://cbrFlag</uri>
       <name>flags</name>
       <pose>0 0 0 0 0 0</pose>
     </include>
-    <include><!-- MainBase -->
+    <include> <!-- MainBase -->
       <static>true</static>
       <uri>model://cbrMainBase</uri>
       <name>MainBase</name>
       <pose>0 0 0 0 0 0</pose>
     </include>
-    <include><!-- baseAir -->
+    <include> <!-- baseAir -->
       <static>true</static>
       <uri>model://cbrBaseair</uri>
       <name>baseAir</name>
       <pose>0 0 0 0 0 0</pose>
     </include>
-    <include><!-- baseGround1 -->
+    <include> <!-- baseGround1 -->
       <static>true</static>
       <uri>model://cbrBaseground1</uri>
       <name>baseGround1</name>
@@ -70,43 +70,43 @@
       <name>baseGround3</name>
       <pose>1 2 -0.1 0 0 0</pose>
     </include>
-    <include><!-- Red sensors -->
+    <include> <!-- Red sensors -->
       <static>true</static>
       <uri>model://cbrSensorsR</uri>
       <name>SensorR</name>
       <pose>0 0 0 0 0 0</pose>
     </include>
-    <include><!-- Green sensors -->
+    <include> <!-- Green sensors -->
       <static>true</static>
       <uri>model://cbrSensorsV</uri>
       <name>SensorV</name>
       <pose>0 0 0 0 0 0</pose>
     </include>
-    <include><!-- QR code A -->
+    <include> <!-- QR code A -->
       <static>true</static>
       <uri>model://QrcodeA</uri>
       <name>qrA</name>
       <pose>0.5 -3 1.05 0 0 0</pose>
     </include>
-    <include><!-- QR code B -->
+    <include> <!-- QR code B -->
       <static>true</static>
       <uri>model://QrcodeB</uri>
       <name>qrB</name>
       <pose>3.31 3.1 1.55 0 0 0</pose>
     </include>
-    <include><!-- QR code C -->
+    <include> <!-- QR code C -->
       <static>true</static>
       <uri>model://QrcodeC</uri>
       <name>qrC</name>
       <pose>-3 -3 0 0 0 0</pose>
     </include>
-    <include><!-- QR code D -->
+    <include> <!-- QR code D -->
       <static>true</static>
       <uri>model://QrcodeD</uri>
       <name>qrD</name>
       <pose>-1 -1 0 0 0 0</pose>
     </include>
-    <include><!-- QR code E -->
+    <include> <!-- QR code E -->
       <static>true</static>
       <uri>model://QrcodeE</uri>
       <name>qrE</name>

@@ -13,14 +13,14 @@
   <library_effects>
     <effect id="Material_003-effect">
       <profile_COMMON>
-        <newparam sid="yellowtube_jpg-surface">
+        <newparam sid="laranja_jpg-surface">
           <surface type="2D">
-            <init_from>yellowtube_jpg</init_from>
+            <init_from>laranja_jpg</init_from>
           </surface>
         </newparam>
-        <newparam sid="yellowtube_jpg-sampler">
+        <newparam sid="laranja_jpg-sampler">
           <sampler2D>
-            <source>yellowtube_jpg-surface</source>
+            <source>laranja_jpg-surface</source>
           </sampler2D>
         </newparam>
         <technique sid="common">
@@ -29,7 +29,7 @@
               <color sid="emission">0 0 0 1</color>
             </emission>
             <diffuse>
-              <texture texture="yellowtube_jpg-sampler" texcoord="UVMap"/>
+              <texture texture="laranja_jpg-sampler" texcoord="UVMap"/>
             </diffuse>
             <index_of_refraction>
               <float sid="ior">1.45</float>
