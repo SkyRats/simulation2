@@ -38,7 +38,7 @@ then
     ros2 launch simulation2 simulate.launch.py world:="$SIMULATION_DIR/worlds/aruco.world" drone:="$SIMULATION_DIR/models/iris_fpv_cam_downward/iris_fpv_cam_downward.sdf"
 elif [ $resposta -eq 2 ]
 then
-    ros2 launch simulation2 simulate.launch.py world:="$SIMULATION_DIR/worlds/aruco.world" drone:="$SIMULATION_DIR/models/iris_green_house/iris_green_house.sdf"
+    ros2 launch simulation2 simulate.launch.py world:="$SIMULATION_DIR/worlds/greenhouse.world" drone:="$SIMULATION_DIR/models/iris_green_house/iris_green_house.sdf" y:=-16 x:=-0.6 Y:=1.57
 elif [ $resposta -eq 3 ]
 then
     ros2 launch simulation2 simulate.launch.py world:="$SIMULATION_DIR/worlds/cbr_2022.world" drone:="$SIMULATION_DIR/models/iris_fpv_cam_downward/iris_fpv_cam_downward.sdf" x:=3.25 y:=-3 z:=1.5 Y:=3.1415
