@@ -7,6 +7,10 @@
     <include>
       <uri>model://sun</uri>
     </include>
+    <spherical_coordinates>
+      <latitude_deg>52.1709563</latitude_deg>
+      <longitude_deg>4.4176953</longitude_deg>
+    </spherical_coordinates>
     <include><!-- ArUco ID=3 -->
       <static>true</static>
       <uri>model://ArUco3</uri>
